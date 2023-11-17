@@ -1,4 +1,3 @@
-# api/app.py
 from flask import Flask
 from api.controllers.recipe_controller import recipe_controller
 
