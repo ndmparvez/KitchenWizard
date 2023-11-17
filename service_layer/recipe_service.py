@@ -1,4 +1,3 @@
-# service_layer/recipe_service.py
 import requests
 
 class RecipeService:

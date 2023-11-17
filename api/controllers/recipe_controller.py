@@ -1,4 +1,3 @@
-# api/controllers/recipe_controller.py
 from flask import Blueprint, jsonify
 from service_layer.recipe_service import RecipeService
 
