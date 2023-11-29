@@ -11,6 +11,8 @@ class RecipeService:
             'apiKey': api_key
         }
         response = requests.get(api_url, params=params)
+        data = response.json()
+        print(data)
         self.generate_response(response)
 
         

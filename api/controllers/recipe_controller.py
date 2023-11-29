@@ -7,7 +7,7 @@ api_key = '3d18ed4aab4647299471295f8f726c9a'
 
 @recipe_controller.route('/recipes', methods=['GET'])
 def get_recipes():
-    query = 'milk'
+    query = 'milk , eggs'
     diet = 'Indian'
     recipes = recipe_service.get_recipes_from_api(query, diet, api_key)
     return jsonify(recipes)
