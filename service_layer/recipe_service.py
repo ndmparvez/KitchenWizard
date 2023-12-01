@@ -1,19 +1,25 @@
 import requests
 
+
 class RecipeService:
-    #Need to be encrypted
-    api_key = ''
-    def get_recipes_from_api(self, query, diet, api_key):
+    
+    def get_recipes_from_api(self, query, diet, cuisine ,api_key):
         api_url = 'https://api.spoonacular.com/recipes/complexSearch'
         params = {
             'query': query,
             'diet': diet,
+            'cuisine' : cuisine,
             'apiKey': api_key
         }
+        print(params)
         response = requests.get(api_url, params=params)
-        data = response.json()
-        print(data)
-        self.generate_response(response)
+        
+        if response.status_code == 200:
+            data = response.json()
+            print(data)
+            return data
+        else:
+            return {"error": f"API request failed with status code {response.status_code}", "response_data": response.text}
 
         
         

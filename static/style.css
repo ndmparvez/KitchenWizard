@@ -425,10 +425,10 @@ textarea:focus {
   width: 100%; }
   .header-area .top-header-area {
     width: 100%;
-    height: 50px;
+    height: 90px;
     background-color: #ffffff;
     border-bottom: 1px solid #dddee9; }
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 1000px) {
       .header-area .top-header-area {
         height: 70px; } }
     .header-area .top-header-area .breaking-news {
@@ -436,7 +436,7 @@ textarea:focus {
       z-index: 1; }
       .header-area .top-header-area .breaking-news .ticker {
         width: 100%;
-        text-align: left;
+        text-align: center;
         position: relative;
         overflow: hidden; }
         .header-area .top-header-area .breaking-news .ticker ul {
