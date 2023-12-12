@@ -7,3 +7,5 @@ To carry on this app you should need:
 - Basic Terminal Commands
 
 Way the project looks after you have cloned it:
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/bbc97ffe-bbf4-44c0-9a93-ec6384c75511)
+
