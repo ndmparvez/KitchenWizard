@@ -61,6 +61,12 @@ For the main_blueprint, the main blueprint will be used to run the application. 
 nano main.py 
 ```
 
+<b>Step 2 — Adding app file</b>
+<br />
+This Flask web application defines two routes: one for rendering an 'index.html' template and another for handling recipe search requests. It utilizes the RecipeService class, initialized with a Spoonacular API key, to fetch recipes based on user input (query, diet, cuisine) through a form. The retrieved recipe data is returned in JSON format. The app runs in debug mode when executed directly.  
+```diff
+nano app.py 
+```
 <b>Step 4 — Creating Templates </b>
 <br />
 Next, create the templates that are used in the app. This is the first step before you can implement the actual login functionality. 
@@ -126,59 +132,25 @@ nano project/recipe_service.py
 ```
 <br />
 
-<b>Step 6 — Configuring the Database </b>
+<b>Step 8 — Amazon EC2 </b>
 <br />
-You will be using an SQLite database. You could create an SQLite database on your own, but let’s have Flask-SQLAlchemy do it for you. You already have the path of the database specified in the __init__.py file, so you will need to tell Flask-SQLAlchemy to create the database in the Python REPL. 
-<br />
-Ensure that you are still in the virtual environment and in the flask_cloud_app directory. 
-If you stop your app and open a Python REPL, you can create the database using the create_all method on the db object: 
-```diff
-python  
-from project import db, create_app, models  	
-db.create_all(app=create_app())  	
-exit()  
-```
-You will now see a db.sqlite file in your project directory. This database will have the user table in it. 
- 
-<b>Step 7 — Setting Up the JavaScript for fetching data from Nasa APOD API </b>
-<br />
-One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. 
- 
-HTTP Request :
-```diff
-GET https://api.nasa.gov/planetary/apod  
-```
-
-concept_tags are now disabled in this service. Also, an optional return parameter copyright is returned if the image is not public domain. 
-  <p align="center">
-  <img width="600" src="https://github.com/karanpardeshi11/Nasa/blob/main/ReadMe/step7.jpg">
-</p>
- 
-Example query :
-```diff
-https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY   
-```
-<p align="center">
-  <img width="600" src="https://github.com/karanpardeshi11/Nasa/blob/main/ReadMe/step7-1.jpg">
-</p>
+We are hosting our web app through AWS EC2.
+To host a Flask web application on Amazon EC2, begin by launching an EC2 instance and connecting to it via SSH. Install necessary software and upload your Flask app code. Install required Python packages, run the Flask app on the instance, and configure the security group to allow incoming traffic on the designated port. Access your app through the public IP address or domain name of the EC2 instance. For a production environment, consider using Gunicorn as a production server, Nginx as a reverse proxy, and ensure proper security practices. Optionally, associate a domain name and implement SSL for secure connections.
+<br /> 
  
 
 <b>Step 8 — Run the application </b>
 <br />
-The FLASK_DEBUG environment variable is enabled by setting it to 1. This will enable a debugger that will display application errors in the browser. 
+The FLASK_DEBUG environment variable is enabled. This will enable a debugger that will display application errors in the browser. 
 <br /> 
-Ensure that you are in the flask_cloud_app directory and then run the project: 
+Ensure that you are in the kitchenWizard directory and then run the project: 
 ```diff
 python3 main.py   
 ```
  
-           
- 
-Now, in a web browser, you can navigate to the five possible URLs and see the text returned that was defined in auth.py and views.py. 
- 
-For example, visiting localhost:5000/ displays: Home: 
+ To run the app, open the dedicated aws site address: Home: 
  <p align="center">
-  <img width="600" src="https://github.com/karanpardeshi11/Nasa/blob/main/ReadMe/step8.jpg">
+  ![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/2601cf8a-1714-4d94-aee4-6136b9f08e27)
 </p> 
  	 
  
