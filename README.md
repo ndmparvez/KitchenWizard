@@ -77,7 +77,8 @@ The app will use six templates:
  - blog-post.html 
  - contact.html
  - elements.html
- - recipe-post.html 
+ - recipe-post.html
+ - signup.html
  <br />
  
 
@@ -111,6 +112,11 @@ nano project/templates/elements.html
 Next, create templates/recipe-post.html: 
 ```diff
 nano project/templates/recipe-post.html  
+```
+
+Next, create templates/signup.html: 
+```diff
+nano project/templates/signup.html  
 ```
  	 
 
