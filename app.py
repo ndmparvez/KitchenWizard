@@ -7,12 +7,11 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 api_key = '3d18ed4aab4647299471295f8f726c9a'
 
-# Replace these values with your MariaDB connection details
 db_config = {
     "host": "database-1.cq27a1ilgnpq.us-east-1.rds.amazonaws.com",
     "user": "admin",
     "password": "Qmulsept2023",
-    "database": "mydatabase",  # Specify the database name
+    "database": "mydatabase",  
 }
 
 def create_connection():
@@ -42,13 +41,10 @@ def signup():
             print(f"Hashed Password : {hashed_password}")
             with create_connection() as connection:
                 with connection.cursor() as cursor:
-                    # Insert values into the 'user' table
                     insert_query = "INSERT INTO user (name, email, password) VALUES (%s, %s, %s)"
-                    #user_data = (name, email, password)
                     cursor.execute(insert_query, (name , email , hashed_password))
                     connection.commit()
-
-        #return render_template('login.html')
+                    
             return jsonify({"success": True})
         except Exception as e:
             print("Error:", str(e))
