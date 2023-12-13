@@ -69,6 +69,12 @@ This Flask web application defines two routes: one for rendering an 'index.html'
 ```diff
 nano app.py 
 ```
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/fe40e0f5-264a-47b4-a836-0dc7c42121b0)
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/ba9ca844-9c5d-4bf0-b4bb-3589c494ebc3)
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/dee4ce1d-74ff-4ad0-b2ed-9137a0cdfaf4)
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/9f40ebae-092e-4829-8a5a-a196e5ae03ea)
+
+
 <b>Step 3 — Creating Templates </b>
 <br />
 Next, create the templates that are used in the app. This is the first step before you can implement the actual login functionality. 
@@ -95,6 +101,7 @@ Next, create templates/signup.html:
 ```diff
 nano project/templates/signup.html  
 ```
+
  	 
 
 <b>Step 4 — Creating static layer </b>
