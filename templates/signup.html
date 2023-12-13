@@ -1,0 +1,72 @@
+<body>
+    <div class="registration-container">
+        <img src="{{ url_for('static', filename='img/core-img/logo.png') }}" alt="Logo">
+        <h1>Registration Form</h1>
+        <form class="registration-form" id="registrationForm" onsubmit="submitForm(event)">
+            <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" required>
+
+            <!-- <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required> -->
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required> -->
+
+            <!-- <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required> -->
+
+            <div class="form-group">
+                <button type="submit">Register</button>
+                <button type="button" class="login" onclick="redirectToLogin()">Login</button>
+            </div>
+        </form>
+    </div>
+        <script>
+        function submitForm(event) {
+            event.preventDefault();
+const firstName = document.getElementById('Name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Validate form fields (you can add more validation as needed)
+
+            // Send the data to the server using AJAX or a form submission
+            // For demonstration, let's assume the server route is /register
+            fetch("{{ url_for('signup') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    Name: firstName,
+                    email: email,
+                    password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server (you can customize based on your needs)
+                if (data.success) {
+                    alert("Registration Successful!");
+                    // Optionally, redirect to login page
+                    redirectToLogin();
+                } else {
+                    alert("Registration failed. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            });
+        }
+    </script>
+
+</body>
+</html>
