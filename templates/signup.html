@@ -7,20 +7,11 @@
             <label for="Name">Name:</label>
             <input type="text" id="Name" name="Name" required>
 
-            <!-- <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required> -->
-
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-
-            <!-- <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required> -->
-
-            <!-- <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required> -->
 
             <div class="form-group">
                 <button type="submit">Register</button>
@@ -35,10 +26,7 @@ const firstName = document.getElementById('Name').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Validate form fields (you can add more validation as needed)
 
-            // Send the data to the server using AJAX or a form submission
-            // For demonstration, let's assume the server route is /register
             fetch("{{ url_for('signup') }}", {
                 method: "POST",
                 headers: {
@@ -52,10 +40,8 @@ const firstName = document.getElementById('Name').value;
             })
             .then(response => response.json())
             .then(data => {
-                // Handle the response from the server (you can customize based on your needs)
                 if (data.success) {
                     alert("Registration Successful!");
-                    // Optionally, redirect to login page
                     redirectToLogin();
                 } else {
                     alert("Registration failed. Please try again.");
