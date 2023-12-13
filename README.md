@@ -1,5 +1,8 @@
 # KitchenWizard
-![h](https://github.com/ndmparvez/KitchenWizard/assets/71454390/5c01b0c6-bd36-47c8-b7b5-ba82e4b6bb6d)
+
+<B>Architecture</B>
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/795d3175-ab60-4c26-902e-b879834f7863)
+
 
 <B>PRE-REQUISITES</B>
 To carry on this app you should need:
