@@ -108,24 +108,22 @@ nano project/templates/recipe-post.html
 ```
  	 
 
-<b>Step 5 — Creating static layer </b>
+<b>Step 5 — Creating service layer </b>
 <br />
 The RecipeService class uses the Spoonacular API to fetch recipes based on specified parameters. The get_recipes_from_api method searches for recipes with a query, diet, and cuisine. The get_recipes_instruction_api method extracts recipe instructions from a given URL. The generate_response method, though unused, aims to return API responses or error messages.
 <br />
 
+<BR />
+Let’s start by creating a service layer directory:
+<BR />
+```diff
+mkdir service_layer
+```
+
 Create the User model: 
 ```diff
-nano project/models.py 
+nano project/recipe_service.py 
 ```
- 	
-Define the User model: 
-  <p align="center">
-  <img width="600" src="https://github.com/karanpardeshi11/Nasa/blob/main/ReadMe/step5.jpg">
-</p>
-  
- 
-This code defines a User with columns for an id, email, password, and name. 
-Now that you’ve created a User model, you can move on to configuring your database. 
 <br />
 
 <b>Step 6 — Configuring the Database </b>
