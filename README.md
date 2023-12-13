@@ -11,7 +11,7 @@ To carry on this app you should need:
 
 Way the project looks after you have cloned it:
 
-![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/bbc97ffe-bbf4-44c0-9a93-ec6384c75511)
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/06ec02c6-e28d-4ef5-9b15-be1ee9a5a1a8)
 
 First, start with creating the project directory: 
 <br />
@@ -97,24 +97,18 @@ nano project/templates/signup.html
 ```
  	 
 
-<b>Step 4 — Creating service layer </b>
+<b>Step 4 — Creating static layer </b>
 <br />
-The RecipeService class uses the Spoonacular API to fetch recipes based on specified parameters. The get_recipes_from_api method searches for recipes with a query, diet, and cuisine. The get_recipes_instruction_api method extracts recipe instructions from a given URL. The generate_response method, though unused, aims to return API responses or error messages.
+ the "static" folder is commonly used to store static assets like CSS files. It organizes resources like stylesheets and images separate from dynamic code. This structure aids in managing and deploying assets in web development projects.
 <br />
 
 <BR />
-Let’s start by creating a service layer directory:
+Let’s start by creating a static layer directory:
 <BR />
 
 ```diff
-mkdir service_layer
+mkdir static
 ```
-
-Create the User model: 
-```diff
-nano project/recipe_service.py 
-```
-<br />
 
 <b>Step 5 — Intialize it in Amazon EC2 </b>
 <br />
