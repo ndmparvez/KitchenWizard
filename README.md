@@ -11,3 +11,10 @@ Way the project looks after you have cloned it:
 
 ![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/bbc97ffe-bbf4-44c0-9a93-ec6384c75511)
 
+First, start with creating the project directory: 
+<br />
+```diff
+ssh -i testInstanceKey.pem ec2-user@54.81.62.94
+```
+<br />
+
