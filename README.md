@@ -21,7 +21,7 @@ mkdir kitchenWizard
 Next, navigate to the project directory:
 <BR />
 ```diff
-cd cloud_flask_app 
+cd kitchenWizard  
 ```
 
 You will want to create a Python environment if you don’t have one. 
@@ -67,7 +67,7 @@ This Flask web application defines two routes: one for rendering an 'index.html'
 ```diff
 nano app.py 
 ```
-<b>Step 4 — Creating Templates </b>
+<b>Step 3 — Creating Templates </b>
 <br />
 Next, create the templates that are used in the app. This is the first step before you can implement the actual login functionality. 
 <br />
@@ -114,7 +114,7 @@ nano project/templates/recipe-post.html
 ```
  	 
 
-<b>Step 5 — Creating service layer </b>
+<b>Step 4 — Creating service layer </b>
 <br />
 The RecipeService class uses the Spoonacular API to fetch recipes based on specified parameters. The get_recipes_from_api method searches for recipes with a query, diet, and cuisine. The get_recipes_instruction_api method extracts recipe instructions from a given URL. The generate_response method, though unused, aims to return API responses or error messages.
 <br />
@@ -132,14 +132,14 @@ nano project/recipe_service.py
 ```
 <br />
 
-<b>Step 8 — Amazon EC2 </b>
+<b>Step 5 — Amazon EC2 </b>
 <br />
 We are hosting our web app through AWS EC2.
 To host a Flask web application on Amazon EC2, begin by launching an EC2 instance and connecting to it via SSH. Install necessary software and upload your Flask app code. Install required Python packages, run the Flask app on the instance, and configure the security group to allow incoming traffic on the designated port. Access your app through the public IP address or domain name of the EC2 instance. For a production environment, consider using Gunicorn as a production server, Nginx as a reverse proxy, and ensure proper security practices. Optionally, associate a domain name and implement SSL for secure connections.
 <br /> 
  
 
-<b>Step 8 — Run the application </b>
+<b>Step 6 — Run the application </b>
 <br />
 The FLASK_DEBUG environment variable is enabled. This will enable a debugger that will display application errors in the browser. 
 <br /> 
@@ -151,8 +151,7 @@ python3 main.py
  To run the app, open the dedicated aws site address: Home: 
  ![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/2601cf8a-1714-4d94-aee4-6136b9f08e27)
 
- 	 
- 
+ 	  
 <b>Conclusion </b>
 <br />
 In conclusion, this project represents a successful implementation of a web application hosted on AWS EC2, utilizing the Flask framework in Python. The application seamlessly integrates with the Spoonacular API, allowing users to search for recipes based on their preferences such as query terms, dietary restrictions, and cuisine types. The AWS infrastructure ensures the scalability and availability of the application, providing a reliable platform for users to access recipe information. The development process included considerations for security, performance, and best practices, showcasing a robust and well-rounded implementation. As a result, this web app serves as an effective and user-friendly tool for exploring and discovering a diverse range of recipes, demonstrating the capabilities of Flask and AWS in building and deploying web applications.
