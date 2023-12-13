@@ -120,6 +120,8 @@ To host a Flask web application on Amazon EC2, begin by launching an EC2 instanc
 <br />
 In deploying MariaDB within an AWS cloud application, set up a MariaDB database on Amazon RDS, specifying key parameters through the AWS Management Console, such as version and security configurations. Establish a security group to manage inbound access to the MariaDB instance, ensuring connections from your application server are permitted. Retrieve the MariaDB endpoint and port from the RDS console and configure your application code to connect using these details along with the assigned username and password. Implement database operations in your application code, utilizing SQL queries or an ORM library as needed. For optimal performance, employ AWS CloudWatch for monitoring, and consider scaling options like adjusting instance size or introducing read replicas to meet the evolving needs of your cloud-based application.
 <br /> 
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/0f874edc-d9c6-49dc-86d9-e366291b93ab)
+
 
 <b>Hash based Memory authentication Code </b>
 <br />
