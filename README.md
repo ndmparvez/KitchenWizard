@@ -149,9 +149,8 @@ python3 main.py
 ```
  
  To run the app, open the dedicated aws site address: Home: 
- <p align="center">
-  ![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/2601cf8a-1714-4d94-aee4-6136b9f08e27)
-</p> 
+ ![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/2601cf8a-1714-4d94-aee4-6136b9f08e27)
+
  	 
  
 <b>Conclusion </b>
