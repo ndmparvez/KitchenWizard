@@ -1,8 +1,7 @@
 # KitchenWizard
 
 <B>Architecture</B>
-![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/795d3175-ab60-4c26-902e-b879834f7863)
-
+![image](https://github.com/ndmparvez/KitchenWizard/assets/71454390/0f6e231c-3364-4455-943b-0eb820780716)
 
 <B>PRE-REQUISITES</B>
 To carry on this app you should need:
@@ -74,12 +73,8 @@ nano app.py
 <br />
 Next, create the templates that are used in the app. This is the first step before you can implement the actual login functionality. 
 <br />
-The app will use six templates: 
+The app will use three templates: 
  - index.html 
- - about.html 
- - blog-post.html 
- - contact.html
- - elements.html
  - recipe-post.html
  - signup.html
  <br />
@@ -90,27 +85,6 @@ create templates/index.html:
 nano project/templates/index.html 
 ```   
 This code will create a basic index page with a title and subtitle. 
-
- 
-Next, create templates/about.html: 
-```diff
-nano project/templates/about.html  
-```
- 
-Next, create templates/blog-post.html: 
-```diff
-nano project/templates/blog-post.html  
-```
- 
-Next, create templates/contact.html: 
-```diff
-nano project/templates/contact.html  
-```
-
-Next, create templates/elements.html: 
-```diff
-nano project/templates/elements.html  
-```
 
 Next, create templates/recipe-post.html: 
 ```diff
@@ -142,11 +116,23 @@ nano project/recipe_service.py
 ```
 <br />
 
-<b>Step 5 — Amazon EC2 </b>
+<b>Step 5 — Intialize it in Amazon EC2 </b>
 <br />
 We are hosting our web app through AWS EC2.
 To host a Flask web application on Amazon EC2, begin by launching an EC2 instance and connecting to it via SSH. Install necessary software and upload your Flask app code. Install required Python packages, run the Flask app on the instance, and configure the security group to allow incoming traffic on the designated port. Access your app through the public IP address or domain name of the EC2 instance. For a production environment, consider using Gunicorn as a production server, Nginx as a reverse proxy, and ensure proper security practices. Optionally, associate a domain name and implement SSL for secure connections.
 <br /> 
+
+<b>MariaDB </b>
+<br />
+In deploying MariaDB within an AWS cloud application, set up a MariaDB database on Amazon RDS, specifying key parameters through the AWS Management Console, such as version and security configurations. Establish a security group to manage inbound access to the MariaDB instance, ensuring connections from your application server are permitted. Retrieve the MariaDB endpoint and port from the RDS console and configure your application code to connect using these details along with the assigned username and password. Implement database operations in your application code, utilizing SQL queries or an ORM library as needed. For optimal performance, employ AWS CloudWatch for monitoring, and consider scaling options like adjusting instance size or introducing read replicas to meet the evolving needs of your cloud-based application.
+<br /> 
+
+<b>Hash based Memory authentication Code </b>
+<br />
+In securing password authentication for an AWS cloud application, adopt a robust approach by employing a cryptographic hash function like bcrypt or Argon2 during user registration to hash and securely store passwords in your chosen AWS data store such as Amazon RDS or DynamoDB. Implement a secure login process by hashing entered passwords and comparing them to the stored hashes during authentication. Utilize HTTPS to encrypt data in transit, and enforce AWS Identity and Access Management (IAM) for resource access control. Regularly update your system, employ AWS CloudWatch for monitoring, and consider AWS Key Management Service (KMS) for key management. Implementing these measures enhances the overall security posture of your cloud-based application, safeguarding user credentials against potential threats.
+<br /> 
+
+
  
 
 <b>Step 6 — Run the application </b>
