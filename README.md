@@ -122,6 +122,7 @@ The RecipeService class uses the Spoonacular API to fetch recipes based on speci
 <BR />
 Let’s start by creating a service layer directory:
 <BR />
+
 ```diff
 mkdir service_layer
 ```
